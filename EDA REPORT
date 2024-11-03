@@ -1,0 +1,35 @@
+EDA REPORT ON THE ANIMAL DATSET
+1. Data Overview
+Total Entries: 205
+Total Columns: 749, mostly Boolean (742 columns), with a few numerical columns (7 columns).
+Column Types:
+7 numerical columns (e.g., Height (cm), Weight (kg), Lifespan (years), Average Speed (km/h))
+742 Boolean columns indicating animal traits (e.g., specific animal species, family, and social structure)
+2. Numerical Data Summary
+Available Columns: Height (cm), Weight (kg), Lifespan (years), Average Speed (km/h), Gestation Period (days), Top Speed (km/h), and Offspring per Birth.
+Descriptive Statistics:
+The mean values of most numerical features are very low, suggesting that values are normalized or scaled within a range of 0 to 1.
+Standard Deviations are low across most columns, indicating less variation within scaled values.
+Minimum and Maximum Values: All numerical columns have minimum values of 0 and maximum values of 1, reinforcing the idea that the dataset may use a binary presence/absence or normalized scale.
+3. Categorical Data Summary
+Boolean Columns: Most Boolean columns represent binary traits for each animal, such as species (Animal_aardwolf, Animal_african elephant) and family (Family_vombatidae), as well as social structures (Social Structure_eusocial, Social Structure_pack-based).
+Common Values: In many Boolean columns, the value False dominates, meaning these traits are absent for a majority of animals.
+Unique Values: Each Boolean column has only two unique values: True (indicating the presence of the trait) and False (absence of the trait).
+4. Missing Values
+Numerical Columns: Significant missing values are present across several numerical columns:
+Height (cm) (missing in 134 entries)
+Weight (kg) (missing in 131 entries)
+Lifespan (years) (missing in 172 entries)
+Gestation Period (days) (missing in 180 entries)
+Boolean Columns: No missing values, as these columns strictly contain True or False values.
+5. Distribution of Numerical Features
+Height, Weight, Lifespan, Gestation Period: Since these columns contain a high number of missing values, insights from their distribution may be limited.
+Average and Top Speed (km/h): These columns indicate variations in speed among different animals but are normalized to a 0-1 scale.
+Offspring per Birth: Shows that most animals in this dataset have an offspring count of 0, with only a few non-zero entries, likely indicating species with high reproduction rates.
+6. Analysis of Social Structures and Species
+Social Structure Columns: These columns provide information on animal social organization, such as whether animals are pack-based, herd-based, or solitary.
+Most Common Structures: Certain structures are relatively rare (e.g., Social Structure_eusocial is mostly False), while others like Social Structure_solitary have higher frequencies of True values, suggesting that many animals in the dataset are solitary.
+7. Key Insights and Observations
+Highly Sparse Data: Many numerical columns are sparsely populated, with numerous missing values. Additional data cleaning may be required to handle this sparseness.
+Binary Traits: The majority of the dataset represents binary animal traits, indicating that the data may be suitable for classification models or binary attribute analysis.
+Common Traits: The dominance of False values in species and social structure columns implies that only a few animals share these traits, suggesting a diverse set of animals with varied characteristics.
